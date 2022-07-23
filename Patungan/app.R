@@ -23,8 +23,8 @@ ui <- fluidPage(
 
   # Show tables of the generated calculation
     mainPanel(
-      textOutput("teks_rincian"),
       tableOutput("tabel_rincian"),
+      textOutput("designedBy")
     )
   )
 )
@@ -70,8 +70,8 @@ server <- function(input, output) {
       mutate_if(is.double, as.integer)
   })
   
-  output$teks_rincian <- eventReactive(input$go, {
-    paste("Rincian")
+  output$designedBy <- eventReactive(input$go, {
+    paste("by R. Hagatama")
   })
 }
 
