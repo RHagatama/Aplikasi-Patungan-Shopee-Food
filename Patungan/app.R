@@ -2,7 +2,7 @@ library(shiny)
 library(shinythemes)
 library(tidyverse)
 
-# Define UI for application that draws a histogram
+# Define UI for application
 ui <- fluidPage(
   theme = shinytheme(theme = "spacelab"),
 
