@@ -4,7 +4,7 @@ library(tidyverse)
 
 # Define UI for application
 ui <- fluidPage(
-  theme = shinytheme(theme = "spacelab"),
+  theme = shinytheme(theme = "superhero"),
 
   # Application title
   titlePanel(strong("Bayar Cuk!")),
@@ -46,7 +46,7 @@ server <- function(input, output) {
     service_fee = input$service/length(price())
     pay_split = price_after_disc + deliv_fee + service_fee
     tibble(
-      `Total Harga Pesanan` = as.integer(price()),
+      `Harga Pesanan` = as.integer(price()),
       `Proporsi (%)` = proportions(price()) * 100,
       Potongan = as.integer(disc_prop),
       `Harga Setelah Diskon` = as.integer(price_after_disc),
